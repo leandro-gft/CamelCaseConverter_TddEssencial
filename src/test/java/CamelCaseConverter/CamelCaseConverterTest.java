@@ -23,5 +23,10 @@ public class CamelCaseConverterTest {
 	public void deveConverterNomeSimplesMisturadoMaiusculoEMinusculo() throws Exception {
 		assertEquals("Lionel", camelCase.converter("lIoNeL"));
 	}
+	
+	@Test
+	public void deveConverterNomeComposto() throws Exception {
+		assertEquals("lionelMessi", camelCase.converter("lionel Messi"));
+	}
 
 }

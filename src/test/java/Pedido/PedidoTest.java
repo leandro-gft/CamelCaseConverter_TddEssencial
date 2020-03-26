@@ -84,5 +84,10 @@ public class PedidoTest {
 		.comItem(15.0, 30);
 		assertResumoPedido(1200.0, 96.0);
 	}
+	
+	@Test(expected = QuantidadeItensInvalidaException.class)
+	public void naoAceitarPedidosComItensComQuantidadeNegativa() {
+		pedido.comItem(0.0, -10);
+	}
 		
 }
